@@ -1,10 +1,22 @@
 .header
+    position: relative
     padding-top: 74px
     height: 1280px
     background-image: url(../img/header/background.svg)
     background-position: center
     background-repeat: no-repeat
     background-size: cover
+    &::after
+        content: ""
+        position: absolute
+        top: -130px
+        left: -204px
+        width: 580px
+        height: 440px
+        background: linear-gradient(91.9deg, #00CCFF 0%, #66FFCC 100%)
+        filter: blur(200px)
+        transform: rotate(90deg)
+        z-index: -1
     &-logo
         margin-bottom: 16px
     &-nav

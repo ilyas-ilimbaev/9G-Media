@@ -79,12 +79,25 @@ ul {
 
 /*секции*/
 .header {
+  position: relative;
   padding-top: 74px;
   height: 1280px;
   background-image: url(../img/header/background.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.header::after {
+  content: "";
+  position: absolute;
+  top: -130px;
+  left: -204px;
+  width: 580px;
+  height: 440px;
+  background: linear-gradient(91.9deg, #00CCFF 0%, #66FFCC 100%);
+  filter: blur(200px);
+  transform: rotate(90deg);
+  z-index: -1;
 }
 .header-logo {
   margin-bottom: 16px;
@@ -182,6 +195,8 @@ ul {
 }
 
 .services {
+  z-index: 2;
+  position: relative;
   margin-top: -190px;
   padding-bottom: 166px;
 }
@@ -316,6 +331,10 @@ ul {
 
   .header {
     height: 978px;
+  }
+  .header::after {
+    top: -27%;
+    left: -21%;
   }
   .header-nav {
     margin-bottom: 125px;
