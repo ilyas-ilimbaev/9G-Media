@@ -190,14 +190,46 @@
         <div class="container">
             <div class="feedback-wrapper">
                 <div class="feedback-contacts">
-                    <h2 class="feedback-title"></h2>
-                    <forms class="contacts-form">
-                        
-                    </forms>
+                    <h2 class="feedback-title">Контакты</h2>
+                    <form id="contact_form" class="contact-form" enctype="multipart/form-data" method="post"
+                        onsubmit="send(event, 'libs/php/mail.php')" novalidate="novalidate">
+                        <div class="form-item">
+                            <input required="" type="tel" name="number" class="form-field" aria-required="true">
+                            <input class="contacts-submit form-field" type="submit" value="Перезвоните мне">
+                        </div>
+                    </form>
+                    <div class="contacts-line">или</div>
+                    <div class="contacts-info">
+                        <ul class="contacts-list">
+                            <li class="contacts-list-item">Тел.:<a href="tel: +7 (999) 999-99-99" class="contacts-item-link">+7 (999) 999-99-99</a></li>
+                            <li class="contacts-list-item">E-Mail.:<a href="mailto: info@9gmedia.ru" class="contacts-item-link">info@9gmedia.ru</a></li>
+                        </ul>
+                        <div class="contacts-message">
+                            <span class="contacts-list-item">Social</span>
+                            <div class="contacts-item-link-icon">
+                                <a href="#" class="contacts-link-icon">
+                                    <svg class="icon">
+                                        <use xlink:href="img/sprite.svg#instagram-feedback"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="feedback-message">
-                    <h2 class="feedback-title"></h2>
-                </div>
+                <!-- <div class="feedback-message">
+                    <h2 class="feedback-title">Напишите нам</h2>
+                    <form id="contact_form" class="contact-form" enctype="multipart/form-data" method="post"
+                        onsubmit="send(event, 'libs/php/mail.php')" novalidate="novalidate">
+                        <div class="form-item">
+                            <input required="" type="text" name="text" class="form-field" aria-required="true" placeholder="Имя">
+                            <input required="" class="form-field" type="email" name="email" placeholder="E-mail">
+                        </div>
+                        <textarea name="message" class="form-field" placeholder="Сообщение"></textarea>
+                        <div class="form-item form-item-message">
+                            <input required="" class="contacts-submit form-field" type="email" placeholder="E-mail">
+                        </div>
+                    </form>
+                </div> -->
             </div>
         </div>
     </sections>

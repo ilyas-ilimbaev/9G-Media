@@ -1,0 +1,95 @@
+.feedback
+    &-wrapper
+        display: flex
+        justify-content: space-between
+    &-title
+        margin-bottom: 45px
+        font-family: $base-font
+        font-weight: 400
+        font-size: 44px
+        line-height: 130%
+        letter-spacing: 1.28px
+        color: $base-color
+    &-contacts
+        max-width: 642px
+    &-message
+        max-width: 625px
+        display: flex
+        flex-direction: column
+        align-items: end
+.form
+    &-field
+        margin-right: 25px
+        padding: 20px
+        max-width: 300px
+        font-family: $base-font
+        font-size: 16px
+        line-height: 15px
+        letter-spacing: 0.15em
+        color: #B3B9C0
+        background: none
+        border: 1px solid #FFFFFF
+        outline: none
+        &:last-child
+            margin-right: 0
+    &-item
+        margin-bottom: 25px
+        display: flex
+        margin-bottom: 25px
+        & textarea
+            height: 100px
+        &-message
+            flex-direction: column
+
+.contacts
+    &-submit
+        padding: 20px 50px
+        font-family: $base-font
+        font-weight: bold
+        font-size: 18px
+        line-height: 17px
+        letter-spacing: 0.08em
+        color: #1F1B20
+        background: linear-gradient(91.9deg, #00CCFF 0%, #66FFCC 100%)
+        cursor: pointer
+    &-line
+        position: relative
+        margin-top: 50px
+        margin-bottom: 50px
+        font-family: $base-font
+        font-size: 18px
+        line-height: 140%
+        text-align: center
+        color: #B3B9C0
+        &::before, &::after
+            content: ""
+            position: absolute
+            display: block
+            top: 50%
+            width: 281px
+            height: 1px
+            background: #B3B9C0
+        &::before
+        &::after
+            right: 0
+    &-list
+        &-item
+            display: inline-block
+            margin-bottom: 36px
+            font-family: $base-font
+            font-size: 16px
+            line-height: 120%
+            letter-spacing: 0.05em
+            text-transform: uppercase
+            color: #FFFFFF
+    &-item
+        &-link
+            margin-left: 46px
+            color: #B3B9C0
+    &-info
+        display: flex
+        justify-content: space-between
+    &-link-icon
+        width: 24px
+        height: 24px
+        display: inline-block
