@@ -1,0 +1,86 @@
+.header
+    padding-top: 74px
+    height: 1280px
+    background-image: url(../img/header/background.svg)
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    &-logo
+        margin-bottom: 16px
+    &-nav
+        margin-bottom: 185px
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+    &-title
+        font-family: $base-font
+        font-style: normal
+        font-weight: normal
+        font-size: 64px
+        line-height: 130%
+        letter-spacing: 1.28px
+        color: $base-color
+    &-text
+        position: relative
+        display: block
+        margin: 0 auto
+        margin-top: 200px
+        text-align: center
+        font-family: $base-font
+        font-size: 36px
+        line-height: 33px
+        color: $base-color
+        &::after
+            content: ""
+            position: absolute
+            display: block
+            width: 1px
+            height: 77px
+            margin-top: 47px
+            left: 50%
+            background-color: $base-color
+            transform: rotate(180deg)
+
+.logo-text
+    position: absolute
+    bottom: -24px
+    left: 0
+.menu
+    &-list
+        display: flex
+        align-items: center
+        &-item
+            margin-right: 50px
+            &:last-child
+                margin-right: 0
+                color: $base-color
+            &:last-child .menu-list-item-link
+                color: #1F1B20
+            &-link
+                font-family: $base-font
+                font-weight: 700
+                font-size: 18px
+                line-height: 17px
+                letter-spacing: 1.28px
+                color: $base-color
+.social-icons
+    &-vertical
+        display: flex
+        flex-direction: column
+        position: fixed
+        bottom: 120px
+        left: 70px
+        top: 460px
+    &-link
+        width: 41px
+        height: 41px
+.vertical-text
+    position: fixed
+    top: 400px
+    right: 0
+    font-family: $base-font
+    font-size: 24px
+    line-height: 22px
+    color: $base-color
+    transform: rotate(90deg)
