@@ -357,6 +357,7 @@ ul {
   color: #FFFFFF;
 }
 .feedback-contacts {
+  margin-right: 60px;
   width: 50%;
   max-width: 642px;
 }
@@ -387,7 +388,6 @@ ul {
 .form-field {
   margin-right: 25px;
   padding: 20px;
-  max-width: 300px;
   font-family: "EuropeExt", sans-serif;
   font-size: 16px;
   line-height: 15px;
@@ -402,11 +402,13 @@ ul {
 }
 .form-item {
   margin-bottom: 25px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 .form-item:first-child input {
+  max-width: 300px;
   width: 50%;
 }
 .form-item textarea {
