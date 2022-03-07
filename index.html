@@ -122,6 +122,7 @@
             <div class="about-content">
                 <div class="about-img">
                     <h2 class="about-title">Почему именно мы?</h2>
+                    <img src="img/about.svg" alt="Почему именно мы?">
                 </div>
                 <div class="about-content-item">
                     <div class="about-item-number">
@@ -189,7 +190,7 @@
                         onsubmit="send(event, 'libs/php/mail.php')" novalidate="novalidate">
                         <div class="form-item">
                             <input required="" type="tel" name="number" class="form-field" aria-required="true">
-                            <input class="contacts-submit form-field" type="submit" value="Перезвоните мне">
+                            <input class="contacts-submit" type="submit" value="Перезвоните мне">
                         </div>
                     </form>
                     <div class="contacts-line">или</div>
@@ -210,20 +211,26 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="feedback-message">
+                <div class="feedback-message">
                     <h2 class="feedback-title">Напишите нам</h2>
-                    <form id="contact_form" class="contact-form" enctype="multipart/form-data" method="post"
+                    <form id="contact_form" class="message-form" enctype="multipart/form-data" method="post"
                         onsubmit="send(event, 'libs/php/mail.php')" novalidate="novalidate">
                         <div class="form-item">
-                            <input required="" type="text" name="text" class="form-field" aria-required="true" placeholder="Имя">
-                            <input required="" class="form-field" type="email" name="email" placeholder="E-mail">
+                            <input required="" type="text" name="number" class="form-field" aria-required="true" placeholder="Имя">
+                            <input required="" class="form-field" type="email" placeholder="E-Mail">
                         </div>
-                        <textarea name="message" class="form-field" placeholder="Сообщение"></textarea>
-                        <div class="form-item form-item-message">
-                            <input required="" class="contacts-submit form-field" type="email" placeholder="E-mail">
+                        <div class="form-item">
+                            <textarea name="message" class="form-field" placeholder="Сообщение" readonly></textarea>
+                        </div>
+                        <div class="form-item form-item-colm">
+                            <p class="feedback-message-info">
+                                Нажимая на кнопку, вы соглашаетесь c <a class="feedback-message-link" href="">политикой обработки
+                                    персональных данных</a>
+                            </p>
+                            <input class="contacts-submit" type="submit" value="Отправить сообщение">
                         </div>
                     </form>
-                </div> -->
+                </div>
             </div>
         </div>
     </sections>

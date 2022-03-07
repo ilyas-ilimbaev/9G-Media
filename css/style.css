@@ -280,6 +280,15 @@ ul {
   z-index: -1;
 }
 
+.about {
+  position: relative;
+}
+.about::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background: url(../img/item-bg-02.svg);
+}
 .about-wrapper {
   display: flex;
   align-items: flex-start;
@@ -289,13 +298,12 @@ ul {
   margin-bottom: 60px;
   margin-right: 70px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 950px;
   height: 950px;
-  opacity: 0.2;
   border-radius: 50%;
-  background-color: cyan;
   shape-outside: circle(50%);
 }
 .about-content-item {
@@ -349,13 +357,31 @@ ul {
   color: #FFFFFF;
 }
 .feedback-contacts {
+  width: 50%;
   max-width: 642px;
 }
 .feedback-message {
-  max-width: 625px;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: end;
+  overflow: hidden;
+}
+.feedback-message-info {
+  max-width: 215px;
+  margin-right: 25px;
+  display: inline-block;
+  font-family: EuropeExt;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 130%;
+  text-align: right;
+  color: #b3b9c0;
+}
+.feedback-message-link {
+  text-decoration: none;
+  color: #00CCFF;
 }
 
 .form-field {
@@ -377,13 +403,16 @@ ul {
 .form-item {
   margin-bottom: 25px;
   display: flex;
-  margin-bottom: 25px;
+  flex-direction: row;
+  align-items: center;
+}
+.form-item:first-child input {
+  width: 50%;
 }
 .form-item textarea {
+  margin-right: 0;
+  width: 100%;
   height: 100px;
-}
-.form-item-message {
-  flex-direction: column;
 }
 
 .contacts-submit {
@@ -442,6 +471,13 @@ ul {
   width: 24px;
   height: 24px;
   display: inline-block;
+}
+
+.message-form {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  max-width: 625px;
 }
 
 /*адаптив*/
