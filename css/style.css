@@ -82,7 +82,7 @@ ul {
   position: relative;
   padding-top: 74px;
   height: 1280px;
-  background-image: url(../img/header/background.svg);
+  background-image: url(../img/header/background.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -197,7 +197,7 @@ ul {
 .services {
   z-index: 2;
   position: relative;
-  margin-top: -190px;
+  margin-top: -298px;
   padding-bottom: 166px;
 }
 .services-wrapper {
@@ -210,7 +210,7 @@ ul {
   align-items: flex-start;
 }
 .services-offer__img {
-  margin-top: -10%;
+  margin-top: 0;
   margin-left: -20%;
   max-width: 795px;
   height: 466px;
@@ -250,12 +250,14 @@ ul {
   color: #FFFFFF;
 }
 .services-item-img {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 200px;
   height: 200px;
-  background: linear-gradient(324.43deg, #32383E -114.89%, #17191C 124.22%);
-  box-shadow: -12px -10px 32px rgba(195, 200, 205, 0.12), 12px 12px 58px rgba(0, 0, 0, 0.74);
-  filter: blur(8px);
   border-radius: 50%;
+  z-index: 2;
 }
 .services-item-text {
   margin-top: 25px;
@@ -266,6 +268,16 @@ ul {
 }
 .services-item-text:first-child {
   margin-top: 0;
+}
+.services-img-blur {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  background: linear-gradient(324.43deg, #32383E -114.89%, #17191C 124.22%);
+  box-shadow: -12px -10px 32px rgba(195, 200, 205, 0.12), 12px 12px 58px rgba(0, 0, 0, 0.74);
+  filter: blur(8px);
+  border-radius: 50%;
+  z-index: -1;
 }
 
 .about-wrapper {
@@ -384,6 +396,7 @@ ul {
   color: #1F1B20;
   background: linear-gradient(91.9deg, #00CCFF 0%, #66FFCC 100%);
   cursor: pointer;
+  border: none;
 }
 .contacts-line {
   position: relative;
@@ -467,9 +480,11 @@ ul {
   }
 
   .services {
+    margin-top: -190px;
     padding-bottom: 136px;
   }
   .services-offer__img {
+    margin-top: -10%;
     max-width: 595px;
   }
   .services-title {
