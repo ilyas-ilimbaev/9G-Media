@@ -366,7 +366,6 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: end;
-  overflow: hidden;
 }
 .feedback-message-info {
   max-width: 215px;
@@ -444,7 +443,7 @@ ul {
   position: absolute;
   display: block;
   top: 50%;
-  width: 281px;
+  width: 260px;
   height: 1px;
   background: #B3B9C0;
 }
@@ -465,14 +464,25 @@ ul {
   margin-left: 46px;
   color: #B3B9C0;
 }
+.contacts-item-link-icon {
+  display: flex;
+  align-items: center;
+}
 .contacts-info {
   display: flex;
   justify-content: space-between;
 }
 .contacts-link-icon {
+  margin-right: 10px;
   width: 24px;
   height: 24px;
   display: inline-block;
+}
+.contacts-link-icon:last-child {
+  margin-right: 0;
+}
+.contacts-list, .contacts-message {
+  max-width: 50%;
 }
 
 .message-form {

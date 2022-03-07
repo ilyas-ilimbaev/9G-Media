@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js"></script>
     <title>9G Media</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
 </head>
 <body>
     <section class="header">
@@ -189,7 +190,7 @@
                     <form id="contact_form" class="contact-form" enctype="multipart/form-data" method="post"
                         onsubmit="send(event, 'libs/php/mail.php')" novalidate="novalidate">
                         <div class="form-item">
-                            <input required="" type="tel" name="number" class="form-field" aria-required="true">
+                            <input class="form-field form-field-phone" required="" type="tel" name="number" aria-required="true" maxlength="12" placeholder="+7(___) ___-____">
                             <input class="contacts-submit" type="submit" value="Перезвоните мне">
                         </div>
                     </form>
@@ -216,8 +217,8 @@
                     <form id="contact_form" class="message-form" enctype="multipart/form-data" method="post"
                         onsubmit="send(event, 'libs/php/mail.php')" novalidate="novalidate">
                         <div class="form-item">
-                            <input required="" type="text" name="number" class="form-field" aria-required="true" placeholder="Имя">
-                            <input required="" class="form-field" type="email" placeholder="E-Mail">
+                            <input class="form-field" required="" type="text" name="name" aria-required="true" placeholder="Имя" maxlength="40">
+                            <input class="form-field" required="" type="email" placeholder="E-Mail">
                         </div>
                         <div class="form-item">
                             <textarea name="message" class="form-field" placeholder="Сообщение" readonly></textarea>
