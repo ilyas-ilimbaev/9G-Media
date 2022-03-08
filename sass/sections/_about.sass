@@ -1,17 +1,27 @@
 .about
     position: relative
+    padding: 20px 0 120px 0
     &::after
         content: ""
         position: absolute
-        display: block
-        background: url(../img/item-bg-02.svg)
+        width: 772px
+        height: 642px
+        left: 20%
+        bottom: -50px
+        background: url(../img/bottom-blur.png)
+        background-position: center
+        background-size: cover
+        background-repeat: no-repeat
+        filter: blur(50px)
+        z-index: -1
     &-wrapper
         display: flex
         align-items: flex-start
     &-img
-        float: left
+        position: relative
         margin-bottom: 60px
         margin-right: 70px
+        float: left
         display: flex
         flex-direction: column
         align-items: center
@@ -20,13 +30,31 @@
         height: 950px
         border-radius: 50%
         shape-outside: circle(50%)
+        &-img
+            max-width: 560px
+        &::after, &::before
+            content: ""
+            position: absolute
+            display: block
+            width: 263px
+            height: 292px
+            transform: rotate(-180deg)
+            z-index: -1
+        &::after
+            top: 54%
+            left: 26px
+            background: rgba(0, 204, 255, 0.7)
+            filter: blur(77px)
+        &::before
+            top: 24%
+            right: 60px
+            background: rgba(102, 255, 204, 0.5)
+            filter: blur(64px)
     &-content
         &-item
             margin-bottom: 75px
             max-width: 720px
             display: flex
-            &:first-child
-                margin-top: -90px
 
     &-item
         &-number

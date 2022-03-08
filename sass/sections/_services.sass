@@ -3,6 +3,16 @@
     position: relative
     margin-top: -298px
     padding-bottom: 166px
+    &::after
+        content: ""
+        position: absolute
+        width: 170px
+        height: 150px
+        right: 0
+        top: 24%
+        background: #66FFCC
+        filter: blur(90px)
+        z-index: -1
     &-wrapper
         display: flex
         justify-content: space-between
@@ -15,14 +25,10 @@
             margin-left: -20%
             max-width: 795px
             height: 466px
+            object-fit: contain
+            object-position: center
     &-title
         margin-bottom: 10px
-        font-family: $base-font
-        font-weight: 400
-        font-size: 44px
-        line-height: 130%
-        letter-spacing: 1.28px
-        color: $base-color
     &-list
         // overflow-x: hidden
         // overflow-y: scroll
