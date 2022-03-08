@@ -118,6 +118,7 @@ ul {
   align-items: center;
 }
 .header-title {
+  display: inline;
   font-size: 64px;
 }
 .header-text {
@@ -146,6 +147,8 @@ ul {
 .logo-text {
   position: absolute;
   display: block;
+  width: 196px;
+  height: 20px;
   bottom: -24px;
   left: 0;
 }
@@ -253,6 +256,16 @@ ul {
   background: linear-gradient(94.6deg, #2F3439 -72.68%, #26292E 26.94%, #17191C 185.78%);
   box-shadow: -5px -6px 16px rgba(195, 200, 205, 0.04), 22px 22px 60px rgba(0, 0, 0, 0.5);
   border-radius: 50px;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.services-list-item.element-show {
+  opacity: 1;
+  transition: all 1s;
+  transform: translateY(0%);
+}
+.services-list-item-show {
+  transition-delay: 1s;
 }
 .services-item-title {
   font-family: "EuropeExt", sans-serif;
@@ -357,6 +370,16 @@ ul {
   margin-bottom: 75px;
   max-width: 720px;
   display: flex;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.about-content-item.element-show {
+  opacity: 1;
+  transition: all 1s;
+  transform: translateY(0%);
+}
+.about-content-item-show {
+  transition-delay: 5s;
 }
 .about-item-number {
   height: 41px;
@@ -386,7 +409,287 @@ ul {
   line-height: 140%;
   color: #B3B9C0;
 }
+.about-group-circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-group-circle-item {
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  transition: 5s;
+}
 
+.circle-item-1 {
+  width: 100px;
+  height: 100px;
+  border: 1px solid;
+  border-color: #66FFCC;
+  -webkit-animation: fadeOut infinite ease 5s;
+          animation: fadeOut infinite ease 5s;
+  opacity: 100%;
+}
+.circle-item-2 {
+  width: 200px;
+  height: 200px;
+  border: 1px solid;
+  border-color: #66FFCC;
+  -webkit-animation: fadeOut2 infinite ease 5s;
+          animation: fadeOut2 infinite ease 5s;
+  opacity: 80%;
+}
+.circle-item-3 {
+  width: 340px;
+  height: 340px;
+  border: 1px solid;
+  border-color: #66FFCC;
+  -webkit-animation: fadeOut3 infinite ease 5s;
+          animation: fadeOut3 infinite ease 5s;
+  opacity: 70%;
+}
+.circle-item-4 {
+  width: 480px;
+  height: 480px;
+  border: 1px solid;
+  border-color: #66FFCC;
+  -webkit-animation: fadeOut4 infinite ease 5s;
+          animation: fadeOut4 infinite ease 5s;
+  opacity: 60%;
+}
+.circle-item-5 {
+  width: 630px;
+  height: 630px;
+  border: 1px solid;
+  border-color: #66FFCC;
+  -webkit-animation: fadeOut5 infinite ease 5s;
+          animation: fadeOut5 infinite ease 5s;
+  opacity: 50%;
+}
+.circle-item-6 {
+  width: 780px;
+  height: 780px;
+  border: 1px solid;
+  border-color: #66FFCC;
+  -webkit-animation: fadeOut6 infinite ease 5s;
+          animation: fadeOut6 infinite ease 5s;
+  opacity: 40%;
+}
+.circle-item-7 {
+  width: 950px;
+  height: 950px;
+  border: 1px solid;
+  border-color: #66FFCC;
+  -webkit-animation: fadeOut7 infinite ease 5s;
+          animation: fadeOut7 infinite ease 5s;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 100%;
+  }
+  80% {
+    opacity: 95%;
+  }
+  90% {
+    opacity: 90%;
+  }
+  100% {
+    opacity: 90%;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 100%;
+  }
+  80% {
+    opacity: 95%;
+  }
+  90% {
+    opacity: 90%;
+  }
+  100% {
+    opacity: 90%;
+  }
+}
+@-webkit-keyframes fadeOut2 {
+  0% {
+    opacity: 90%;
+  }
+  80% {
+    opacity: 80%;
+  }
+  90% {
+    opacity: 70%;
+  }
+  100% {
+    opacity: 80%;
+  }
+}
+@keyframes fadeOut2 {
+  0% {
+    opacity: 90%;
+  }
+  80% {
+    opacity: 80%;
+  }
+  90% {
+    opacity: 70%;
+  }
+  100% {
+    opacity: 80%;
+  }
+}
+@-webkit-keyframes fadeOut3 {
+  0% {
+    opacity: 70%;
+  }
+  80% {
+    opacity: 90%;
+  }
+  90% {
+    opacity: 80%;
+  }
+  100% {
+    opacity: 70%;
+  }
+}
+@keyframes fadeOut3 {
+  0% {
+    opacity: 70%;
+  }
+  80% {
+    opacity: 90%;
+  }
+  90% {
+    opacity: 80%;
+  }
+  100% {
+    opacity: 70%;
+  }
+}
+@-webkit-keyframes fadeOut4 {
+  0% {
+    opacity: 60%;
+  }
+  80% {
+    opacity: 80%;
+  }
+  90% {
+    opacity: 70%;
+  }
+  100% {
+    opacity: 60%;
+  }
+}
+@keyframes fadeOut4 {
+  0% {
+    opacity: 60%;
+  }
+  80% {
+    opacity: 80%;
+  }
+  90% {
+    opacity: 70%;
+  }
+  100% {
+    opacity: 60%;
+  }
+}
+@-webkit-keyframes fadeOut5 {
+  0% {
+    opacity: 50%;
+  }
+  80% {
+    opacity: 70%;
+  }
+  90% {
+    opacity: 60%;
+  }
+  100% {
+    opacity: 50%;
+  }
+}
+@keyframes fadeOut5 {
+  0% {
+    opacity: 50%;
+  }
+  80% {
+    opacity: 70%;
+  }
+  90% {
+    opacity: 60%;
+  }
+  100% {
+    opacity: 50%;
+  }
+}
+@-webkit-keyframes fadeOut6 {
+  0% {
+    opacity: 40%;
+  }
+  80% {
+    opacity: 60%;
+  }
+  90% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 40%;
+  }
+}
+@keyframes fadeOut6 {
+  0% {
+    opacity: 40%;
+  }
+  80% {
+    opacity: 60%;
+  }
+  90% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 40%;
+  }
+}
+@-webkit-keyframes fadeOut7 {
+  0% {
+    opacity: 30%;
+  }
+  14.28% {
+    opacity: 60%;
+  }
+  28.56% {
+    opacity: 50%;
+  }
+  57.12% {
+    opacity: 40%;
+  }
+  100% {
+    opacity: 30%;
+  }
+}
+@keyframes fadeOut7 {
+  0% {
+    opacity: 30%;
+  }
+  14.28% {
+    opacity: 60%;
+  }
+  28.56% {
+    opacity: 50%;
+  }
+  57.12% {
+    opacity: 40%;
+  }
+  100% {
+    opacity: 30%;
+  }
+}
 .feedback {
   padding: 120px 0;
 }
@@ -615,6 +918,10 @@ ul {
     max-width: 1250px;
   }
 
+  .section-title {
+    font-size: 36px;
+  }
+
   .header {
     height: 978px;
   }
@@ -652,9 +959,6 @@ ul {
     margin-top: -10%;
     max-width: 595px;
   }
-  .services-title {
-    font-size: 35px;
-  }
   .services-item-title {
     font-size: 25px;
   }
@@ -674,6 +978,9 @@ ul {
     width: 670px;
     height: 670px;
   }
+  .about-img-img {
+    max-width: 500px;
+  }
   .about-content-item {
     margin-bottom: 65px;
   }
@@ -686,6 +993,31 @@ ul {
   }
   .about-item-text {
     font-size: 18px;
+  }
+
+  .circle-item-2 {
+    width: 150px;
+    height: 150px;
+  }
+  .circle-item-3 {
+    width: 250px;
+    height: 250px;
+  }
+  .circle-item-4 {
+    width: 350px;
+    height: 350px;
+  }
+  .circle-item-5 {
+    width: 450px;
+    height: 450px;
+  }
+  .circle-item-6 {
+    width: 550px;
+    height: 550px;
+  }
+  .circle-item-7 {
+    width: 650px;
+    height: 650px;
   }
 
   .contacts-item-link {
