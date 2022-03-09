@@ -17,8 +17,6 @@
         filter: blur(200px)
         transform: rotate(90deg)
         z-index: -1
-    &-logo
-        margin-bottom: 16px
     &-nav
         margin-bottom: 185px
         display: flex
@@ -49,13 +47,10 @@
             background-color: $base-color
             transform: rotate(180deg)
 
-.logo-text
-    position: absolute
-    display: block
-    width: 196px
-    height: 20px
-    bottom: -24px
-    left: 0
+    & .logo-text
+        position: absolute
+        margin-bottom: 0
+        left: 0
 .menu
     &-list
         display: flex
