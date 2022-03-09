@@ -6,8 +6,7 @@ function onEntry(entry) {
   });
 }
 
-let options = {
-  threshold: [0.5] };
+let options = {threshold: [0.5] };
 let observer = new IntersectionObserver(onEntry, options);
 let services = document.querySelectorAll('.services-list-item');
 let about = document.querySelectorAll('.about-content-item');
