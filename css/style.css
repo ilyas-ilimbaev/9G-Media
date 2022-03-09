@@ -1023,4 +1023,9 @@ ul {
   .contacts-item-link {
     margin-left: 26px;
   }
+}
+@media (max-width: 1200px) {
+  .header, .services, .about, .feedback, .footer {
+    padding: 60px 30px 60px 30px;
+  }
 }/*# sourceMappingURL=style.css.map */
