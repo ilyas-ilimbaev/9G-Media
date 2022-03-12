@@ -3,6 +3,8 @@
         max-width: 1250px
     .section-title
         font-size: 36px
+    .header, .services, .about, .feedback, .footer
+        padding: 60px 20px
     .header
         height: 978px
         &::after
@@ -29,20 +31,21 @@
         &-wrapper
         &-offer
             &__img
-                margin-top: -10%
                 max-width: 595px
         &-item
             &-title
-                font-size: 25px
+                font-size: 26px
             &-text
                 margin-top: 20px
                 font-size: 16px
+            &-info
+                margin-right: 56px
         &-list
             &__list
                 margin-top: 20px
             &-item
                 padding: 26px 26px
-                width: 645px
+                max-width: 645px
     .about
         &-wrapper
         &-img
@@ -86,11 +89,15 @@
                 margin-left: 26px
 @media (max-width: 1200px)
     .header, .services, .about, .feedback, .footer
-        padding: 60px 30px 60px 30px
+        padding: 60px 30px
     .section-title
         font-size: 26px
     .section-button
         padding: 16px 30px
+    .header .menu-list-item:first-child
+        display: none
+    .header .menu-list-item:nth-child(2)
+        display: none
     .header
         &-title
             font-size: 36px
@@ -107,39 +114,65 @@
                 &-link
                     font-size: 16px
     .services
-        margin-top: -278px
+        margin-top: -358px
         &-offer__img
             max-width: 530px
         &-list-item
-            width: 600px
+            max-width: 600px
+        &-item
+            &-title
+                font-size: 20px
+        &-item-info
+            width: 100%
+            margin-top: 20px
+            margin-right: 0
+        &-wrapper
+            flex-direction: column
+            align-items: center
+        &-offer
+            align-items: center
+            margin-bottom: 40px
+            &__img
+                max-width: 530px
+                margin-left: 0
+        &-list
+            &-item
+                max-width: 645px
+        &-img-blur
+            filter: blur(3px)
     .about
         &-img
-            width: 470px
-            height: 470px
+            width: 370px
+            height: 370px
+            margin-top: 76px
+            &-img
+                max-width: 370px
         &-content-item
             margin-bottom: 40px
         &-item
             &-number
                 margin-right: 10px
-                font-size: 24px
+                font-size: 18px
             &-title
-                font-size: 24px
+                font-size: 18px
             &-text
-                font-size: 16px
+                font-size: 14px
         &-content-item
             margin-bottom: 26px
     .contacts
         &-submit
-            padding: 20px 35px
+            padding: 20px 20px
             font-size: 16px
         &-item-link
             margin-left: 12px
 @media (max-width: 992px)
+    .social-icons-vertical
+        display: none
     .section-title
-        font-size: 26px
+        font-size: 24px
     .section-button
-        padding-right: 18px
-        padding-left: 18px
+        padding: 14px
+        font-size: 14px
     .site-logo
         max-width: 225px
         width: 100%
@@ -150,29 +183,26 @@
                 &-link
                     font-size: 14px
     .services
-        &-offer, &-list
-            width: 50%
-        &-list
-            &-item
-                padding: 20px 26px
-                max-width: 480px
-            &__list
-                margin-top: 14px
+        margin-top: -358px
         &-item
-            &-info
-                margin-right: 56px
-            &-title
-                font-size: 20px
-            &-text
-                margin-top: 16px
-                font-size: 14px
             &-img
                 width: 150px
                 height: 150px
-        &-img
-            max-width: 100px
-            max-height: 100px
+        &-list
+            &-item
+                padding: 20px 26px
+            &__list
+                margin-top: 14px
+            &-text
+                margin-top: 16px
+                font-size: 12px
     .about
+        &-wrapper
+            display: flex
+            flex-direction: column
+            align-items: center
+        &-img
+            margin-top: 0
         &-item
             &-title
                 font-size: 20px
@@ -205,5 +235,72 @@
         &-field
             margin-top: 25px
             margin-right: 0
+@media (max-width: 768px)
+    .services
+        &-offer
+            &__img
+                max-width: 450px
+@media (max-width: 560px)
+    .site-logo
+        max-width: 190px
+    .header
+        height: 778px
+        & .menu-list-item-link
+            display: none
+        &-text::after
+            margin-top: 25px
+    .services
+        margin-top: -258px
+        &-offer
+            width: 100%
+        &-list
+            &-item
+                flex-direction: column-reverse
+        &-item-img
+            width: 130px
+            height: 130px
+        &-img
+            max-width: 80px
+            height: 80px
+    .about
+        &::after
+            transform: scale(1.5)
+        &-wrapper
+            flex-direction: column
+        &-img
+            margin-right: 0
+            margin-bottom: 60px
+    .circle-item-4
+        width: 250px
+        height: 250px
+    .circle-item-5
+        width: 350px
+        height: 350px
+    .circle-item-6
+        width: 450px
+        height: 450px
+    .circle-item-7
+        width: 550px
+        height: 550px
 
-
+    .contacts-line::before, .contacts-line::after
+        width: 220px
+    .footer
+        &-wrapper
+            flex-wrap: wrap
+        &-list-item
+            margin-top: 20px
+            &:first-child
+                margin-top: 20px
+    .feedback
+        &-wrapper
+            flex-direction: column
+            align-items: center
+        &-contacts
+            margin-right: 0
+            width: initial
+        &-message
+            width: 100%
+            align-items: initial
+    .form-item:first-child input
+        width: 100%
