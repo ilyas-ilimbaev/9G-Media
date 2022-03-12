@@ -201,6 +201,7 @@ ul {
   line-height: 22px;
   color: #FFFFFF;
   transform: rotate(90deg);
+  z-index: 4;
 }
 
 .services {
@@ -230,8 +231,9 @@ ul {
   align-items: flex-start;
 }
 .services-offer__img {
-  margin-left: -20%;
-  max-width: 795px;
+  margin: 30px 0;
+  max-width: 395px;
+  width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
   -o-object-position: center;
@@ -764,6 +766,7 @@ ul {
   margin-right: 0;
   width: 100%;
   height: 100px;
+  resize: none;
 }
 
 .contacts-submit {
@@ -916,6 +919,13 @@ ul {
   height: 1px;
   background-color: #B3B9C0;
 }
+.footer .menu-list {
+  align-items: flex-start;
+  flex-direction: column;
+}
+.footer .menu-list li {
+  margin-top: 20px;
+}
 
 /*animation*/
 @-webkit-keyframes wipe-enter {
@@ -944,6 +954,136 @@ ul {
             animation-iteration-count: infinite;
   }
 }
+/*order-form*/
+.application {
+  position: relative;
+  display: none;
+  margin: 0 auto;
+  padding: 50px 60px;
+  width: 1626px;
+  height: 882px;
+  background: linear-gradient(94.6deg, #2F3439 -72.68%, #26292E 26.94%, #17191C 185.78%);
+  box-shadow: -5px -6px 16px rgba(195, 200, 205, 0.04), 22px 22px 60px rgba(0, 0, 0, 0.5);
+  border-radius: 50px;
+}
+.application-form {
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #B3B9C0;
+}
+.application-form-item {
+  margin-bottom: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.application-form-item:nth-child(2) {
+  max-width: 859px;
+  width: 70%;
+}
+.application-form-item:nth-child(5) {
+  width: 100%;
+}
+.application-form-item-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.application-form-item-wrapper:nth-child(3) .application-form-item {
+  width: 100%;
+}
+.application-form-item-wrapper:nth-child(4) .application-form-item:first-child {
+  margin-right: 20px;
+}
+.application-form-item-wrapper:nth-child(6) .application-form-item:first-child {
+  margin-right: 20px;
+}
+.application-form-item-wrapper:nth-child(6) .application-form-item {
+  width: 50%;
+}
+.application-form-item-wrapper:nth-child(6) .application-form-item input {
+  width: 100%;
+}
+.application-form-label, .application-form-input, .application-form-select {
+  width: inherit;
+  font-family: "Europe_Ext", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 15px;
+  letter-spacing: 0.15em;
+  color: #D1D7DE;
+}
+.application-form-label {
+  width: inherit;
+  margin-right: 20px;
+}
+.application-form-input, .application-form-select {
+  padding: 20px;
+  background: linear-gradient(94.6deg, #2F3439 -72.68%, #26292E 26.94%, #17191C 185.78%);
+  border: 1px solid #FFFFFF;
+  outline: none;
+}
+.application-form-select {
+  width: inherit;
+  background-color: #2F3439;
+  cursor: pointer;
+}
+.application-form-input {
+  max-width: 224px;
+  width: 100%;
+}
+.application-title {
+  margin-bottom: 35px;
+  font-family: "Europe_Ext", sans-serif;
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 130%;
+  letter-spacing: 0.08em;
+  color: #FFFFFF;
+}
+.application-closed {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 20px;
+  right: 50px;
+  cursor: pointer;
+}
+.application-send {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+.application-info {
+  max-width: 215px;
+  margin-right: 25px;
+  display: inline-block;
+  font-family: EuropeExt;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 130%;
+  text-align: right;
+  color: #b3b9c0;
+}
+.application-info-link {
+  text-decoration: none;
+  color: #00CCFF;
+}
+.application-button {
+  justify-content: right;
+  padding: 20px 50px;
+  font-family: "Europe_Ext", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 17px;
+  letter-spacing: 0.08em;
+  color: #1F1B20;
+  background: linear-gradient(91.9deg, #00CCFF 0%, #66FFCC 100%);
+  cursor: pointer;
+  border: none;
+}
+
 /*адаптив*/
 @media (max-width: 1550px) {
   .container {
@@ -990,9 +1130,6 @@ ul {
   .services {
     margin-top: -190px;
     padding-bottom: 136px;
-  }
-  .services-offer__img {
-    max-width: 595px;
   }
   .services-item-title {
     font-size: 26px;
@@ -1060,6 +1197,13 @@ ul {
 
   .contacts-item-link {
     margin-left: 26px;
+  }
+
+  .application {
+    width: 1400px;
+  }
+  .application-form-input, .application-form-select {
+    padding: 14px;
   }
 }
 @media (max-width: 1200px) {
@@ -1129,7 +1273,7 @@ ul {
     margin-bottom: 40px;
   }
   .services-offer__img {
-    max-width: 530px;
+    max-width: 330px;
     margin-left: 0;
   }
   .services-list-item {
@@ -1173,6 +1317,10 @@ ul {
   }
 }
 @media (max-width: 992px) {
+  .header, .services, .about, .feedback, .footer {
+    padding: 40px 30px;
+  }
+
   .social-icons-vertical {
     display: none;
   }
@@ -1189,6 +1337,10 @@ ul {
   .site-logo {
     max-width: 225px;
     width: 100%;
+  }
+
+  .header-text {
+    font-size: 24px;
   }
 
   .menu-list-item {
@@ -1269,12 +1421,21 @@ ul {
 }
 @media (max-width: 768px) {
   .services-offer__img {
-    max-width: 450px;
+    max-width: 300px;
   }
 }
 @media (max-width: 560px) {
+  .section-title {
+    font-size: 22px;
+  }
+
   .site-logo {
     max-width: 190px;
+  }
+
+  .vertical-text {
+    right: -133px;
+    font-size: 20px;
   }
 
   .header {
@@ -1285,6 +1446,17 @@ ul {
   }
   .header-text::after {
     margin-top: 25px;
+  }
+  .header-nav {
+    margin-bottom: 75px;
+  }
+  .header-text {
+    margin-top: 50px;
+    font-size: 22px;
+  }
+  .header::after {
+    width: 280px;
+    height: 280px;
   }
 
   .services {
@@ -1316,24 +1488,33 @@ ul {
     margin-bottom: 60px;
   }
 
+  .circle-item-1 {
+    width: 50px;
+    height: 50px;
+  }
+  .circle-item-1 {
+    width: 100px;
+    height: 100px;
+  }
+  .circle-item-3 {
+    width: 150px;
+    height: 150px;
+  }
   .circle-item-4 {
+    width: 200px;
+    height: 200px;
+  }
+  .circle-item-5 {
     width: 250px;
     height: 250px;
   }
-
-  .circle-item-5 {
+  .circle-item-6 {
+    width: 300px;
+    height: 300px;
+  }
+  .circle-item-7 {
     width: 350px;
     height: 350px;
-  }
-
-  .circle-item-6 {
-    width: 450px;
-    height: 450px;
-  }
-
-  .circle-item-7 {
-    width: 550px;
-    height: 550px;
   }
 
   .contacts-line::before, .contacts-line::after {

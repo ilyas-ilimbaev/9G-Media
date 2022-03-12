@@ -1,0 +1,108 @@
+.application
+    position: relative
+    display: none
+    margin: 0 auto
+    padding: 50px 60px
+    width: 1626px
+    height: 882px
+    background: linear-gradient(94.6deg, #2F3439 -72.68%, #26292E 26.94%, #17191C 185.78%)
+    box-shadow: -5px -6px 16px rgba(195, 200, 205, 0.04), 22px 22px 60px rgba(0, 0, 0, 0.5)
+    border-radius: 50px
+    &-form
+        margin-bottom: 40px
+        padding-bottom: 40px
+        border-bottom: 1px solid #B3B9C0
+        &-item
+            margin-bottom: 30px
+            display: inline-flex
+            align-items: center
+            justify-content: flex-end
+            &:nth-child(2)               
+                max-width: 859px
+                width: 70%
+            &:nth-child(5)
+                width: 100%
+            &-wrapper
+                width: 100%
+                display: flex
+                justify-content: space-between
+                &:nth-child(3) .application-form-item
+                    width: 100%
+                &:nth-child(4) .application-form-item:first-child
+                    margin-right: 20px
+                &:nth-child(6) .application-form-item:first-child
+                    margin-right: 20px
+                &:nth-child(6) .application-form-item
+                    width: 50%
+                &:nth-child(6) .application-form-item input
+                    width: 100%
+                    
+        &-label, &-input, &-select
+            width: inherit
+            font-family: $base-font
+            font-weight: 400
+            font-size: 16px
+            line-height: 15px
+            letter-spacing: 0.15em
+            color: #D1D7DE
+        &-label
+            width: inherit
+            margin-right: 20px
+        &-input, &-select
+            padding: 20px
+            background: linear-gradient(94.6deg, #2F3439 -72.68%, #26292E 26.94%, #17191C 185.78%)
+            border: 1px solid #FFFFFF
+            outline: none
+        &-select
+            width: inherit
+            background-color: #2F3439
+            cursor: pointer
+        &-input
+            max-width: 224px
+            width: 100%
+
+    &-title
+        margin-bottom: 35px
+        font-family: $base-font
+        font-weight: 400
+        font-size: 44px
+        line-height: 130%
+        letter-spacing: 0.08em
+        color: #FFFFFF
+    &-closed
+        position: absolute
+        width: 24px
+        height: 24px
+        top: 20px
+        right: 50px
+        cursor: pointer
+    &-send
+        display: flex
+        align-items: center
+        justify-content: right
+    &-info
+        max-width: 215px
+        margin-right: 25px
+        display: inline-block
+        font-family: EuropeExt
+        font-style: normal
+        font-weight: normal
+        font-size: 10px
+        line-height: 130%
+        text-align: right
+        color: #b3b9c0
+        &-link
+            text-decoration: none
+            color: #00CCFF
+    &-button
+        justify-content: right
+        padding: 20px 50px
+        font-family: $base-font
+        font-weight: bold
+        font-size: 18px
+        line-height: 17px
+        letter-spacing: 0.08em
+        color: #1F1B20
+        background: linear-gradient(91.9deg, #00CCFF 0%, #66FFCC 100%)
+        cursor: pointer
+        border: none
