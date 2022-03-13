@@ -785,6 +785,11 @@ ul {
   position: relative;
   margin-top: 50px;
   margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+}
+.contacts-line-text {
+  margin: 0 10px;
   font-family: "Europe_Ext", sans-serif;
   font-size: 18px;
   line-height: 140%;
@@ -793,10 +798,10 @@ ul {
 }
 .contacts-line::before, .contacts-line::after {
   content: "";
-  position: absolute;
+  position: relative;
   display: block;
   top: 50%;
-  width: 260px;
+  width: 100%;
   height: 1px;
   background: #B3B9C0;
 }
@@ -1515,10 +1520,6 @@ ul {
   .circle-item-7 {
     width: 350px;
     height: 350px;
-  }
-
-  .contacts-line::before, .contacts-line::after {
-    width: 220px;
   }
 
   .footer-wrapper {
