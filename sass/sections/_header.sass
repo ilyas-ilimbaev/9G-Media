@@ -46,6 +46,8 @@
             left: 50%
             background-color: $base-color
             transform: rotate(180deg)
+    & .logo-text
+        position: absolute
 .menu
     &-list
         display: flex
@@ -79,10 +81,46 @@
 .vertical-text
     position: fixed
     top: 400px
-    right: -126px
+    right: -150px
     font-family: $base-font
     font-size: 24px
     line-height: 22px
     color: $base-color
     transform: rotate(90deg)
     z-index: 4
+.toggle-menu
+    position: relative
+    width: 40px
+    height: 25px
+    display: none
+    align-items: center
+    cursor: pointer
+    z-index: 10
+    & span
+        position: relative
+        display: inline-block
+        width: 100%
+        height: 5px
+        background-color: #fff
+        transition: .5s
+        &::before
+            top: -10px
+        &::after
+            bottom: -10px
+        &::after, &::before
+            content: ""
+            position: absolute
+            width: 100%
+            height: 5px
+            background-color: #fff
+            transition: .5s
+    &.active span
+        background-color: transparent
+        &::before, &::after
+            background-color:#686a6d
+        &::before
+            top: 0px
+            transform: rotate(45deg)
+        &::after
+            top: 0px
+            transform: rotate(-45deg)
