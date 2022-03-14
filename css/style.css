@@ -30,6 +30,9 @@ body {
   color: #FFFFFF;
   background-color: #1D1F23;
 }
+body.noscroll {
+  overflow: hidden;
+}
 
 h1, h2, h3, h4, p, a, ul, li {
   margin: 0;
@@ -42,6 +45,21 @@ a {
 
 ul {
   list-style: none;
+}
+
+#overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 6;
+}
+#overlay.active {
+  display: block;
 }
 
 .container {
@@ -1318,6 +1336,11 @@ ul {
     padding: 14px;
   }
 }
+@media only screen and (min-width: 1200px) {
+  body.noscroll {
+    overflow: scroll;
+  }
+}
 @media (max-width: 1200px) {
   .header, .services, .about, .feedback, .footer {
     padding: 60px 30px;
@@ -1457,6 +1480,9 @@ ul {
   .header-menu {
     display: none;
   }
+  .header-text {
+    display: block;
+  }
 
   .menu-list-item {
     margin-right: 14px;
@@ -1467,6 +1493,9 @@ ul {
 
   .services {
     margin-top: -358px;
+  }
+  .services-title {
+    display: inline-block;
   }
   .services-item-img {
     width: 150px;
@@ -1553,12 +1582,12 @@ ul {
   }
 
   .vertical-text {
-    right: -130px;
+    right: -128px;
     font-size: 20px;
   }
 
   .header {
-    height: 725px;
+    height: 525px;
   }
   .header .menu-list-item-link {
     display: none;
@@ -1567,9 +1596,10 @@ ul {
     margin-top: 25px;
   }
   .header-nav {
-    margin-bottom: 75px;
+    margin-bottom: 100px;
   }
   .header-text {
+    display: none;
     margin-top: 50px;
     font-size: 22px;
   }
@@ -1580,6 +1610,9 @@ ul {
 
   .services {
     margin-top: -258px;
+  }
+  .services-title {
+    display: none;
   }
   .services-offer {
     width: 100%;
