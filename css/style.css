@@ -1042,7 +1042,11 @@ ul {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 6;
+  transform: translateY(5%);
+  z-index: 8;
+}
+.application.active {
+  display: block;
 }
 .application-form {
   margin-bottom: 40px;
@@ -1057,7 +1061,7 @@ ul {
 }
 .application-form-item:nth-child(2) {
   max-width: 859px;
-  width: 70%;
+  width: 65%;
 }
 .application-form-item:nth-child(5) {
   width: 100%;
@@ -1071,13 +1075,13 @@ ul {
   width: 100%;
 }
 .application-form-item-wrapper:nth-child(4) .application-form-item:first-child {
-  margin-right: 20px;
+  margin-right: 10px;
 }
 .application-form-item-wrapper:nth-child(6) .application-form-item:first-child {
-  margin-right: 20px;
+  margin-right: 10px;
 }
 .application-form-item-wrapper:nth-child(6) .application-form-item {
-  width: 50%;
+  width: 53%;
 }
 .application-form-item-wrapper:nth-child(6) .application-form-item input {
   width: 100%;
@@ -1107,7 +1111,7 @@ ul {
   cursor: pointer;
 }
 .application-form-input {
-  max-width: 224px;
+  max-width: 324px;
   width: 100%;
 }
 .application-title {
@@ -1330,10 +1334,15 @@ ul {
   }
 
   .application {
-    width: 1400px;
+    padding: 40px 30px;
+    width: 1200px;
+    height: 682px;
   }
   .application-form-input, .application-form-select {
     padding: 14px;
+  }
+  .application-send {
+    margin-top: -20px;
   }
 }
 @media only screen and (min-width: 1200px) {
